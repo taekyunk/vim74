@@ -24,3 +24,8 @@ nnoremap <leader>pt :w <bar> silent ! texify --pdf %<CR>
 "
 "" Map keys
 "noremap <buffer> <silent> <Leader>po <Esc>:PdfOpen<CR>
+
+
+"" Change \choice -> \correctchoice: 
+"" 'ak' means answer key
+nnoremap <leader>ak :s/choice/correctchoice/g <bar> :let @/ = "" <CR>
