@@ -61,9 +61,6 @@ set incsearch
 " Indent
 set ai
 
-" Spell check
-set spell
-
 " Show line number
 set number
 
@@ -208,5 +205,15 @@ endfunction
 
 nnoremap <silent> <leader>mth :call MakePipeTableHeader()<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Selectively load spell checker for some file types
+" http://jhshi.wordpress.com/2012/11/05/enabledisable-spell-checking-according-to-file-type-in-vim/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" global setting
+set nospell
 
+" local
+au BufNewFile,BufRead,BufEnter *.tex setlocal spell spelllang=en_us
+au BufNewFile,BufRead,BufEnter *.txt setlocal spell spelllang=en_us
+au BufNewFile,BufRead,BufEnter *.md setlocal spell spelllang=en_us
