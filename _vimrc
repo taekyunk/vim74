@@ -83,7 +83,8 @@ filetype plugin on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Color scheme
-colorscheme zenburn
+" colorscheme zenburn
+colorscheme solarized
 
 " Automatically justify table with | using tabular plugin
 " From https://gist.github.com/287147
