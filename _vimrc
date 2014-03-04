@@ -64,7 +64,10 @@ set ai
 " Show line number
 set number
 
-" Do not highlight syntax
+" Highlight current line 
+set cursorline
+
+" Use highlight syntax
 " syntax off
 
 " No compatibility with VI
