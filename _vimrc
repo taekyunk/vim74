@@ -109,6 +109,11 @@ endfunction
 let g:languagetool_jar="e:/My_Program_Files/LanguageTool-2.1/languagetool-commandline.jar"
 let g:languagetool_lang="en-US"
 
+" EasyAlign
+" For visual mode (e.g. vip<Enter>)
+vmap <Enter>   <Plug>(EasyAlign)
+" For normal mode, with Vim movement (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
@@ -207,6 +212,7 @@ function! MakePipeTableHeader()
 endfunction
 
 nnoremap <silent> <leader>mth :call MakePipeTableHeader()<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Selectively load spell checker for some file types
