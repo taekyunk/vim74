@@ -84,6 +84,7 @@ filetype plugin on
 
 " Color scheme
 " colorscheme zenburn
+set background=dark
 colorscheme solarized
 
 " Automatically justify table with | using tabular plugin
