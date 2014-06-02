@@ -3,6 +3,6 @@
 %
 
 * Set up vim plugins managed by Pathogen
-* For windows
+* For windows and linux
 * Based on Vim 7.4
 
