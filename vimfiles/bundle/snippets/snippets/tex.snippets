@@ -1,0 +1,85 @@
+# Note: in *.snippets, need to use tab instead of space!
+# Enumerate
+snippet enum
+	\begin{enumerate}
+		\item ${1}
+	\end{enumerate}
+# Itemize
+snippet item
+	\begin{itemize}
+		\item ${1}
+	\end{itemize}
+# Description
+snippet desc
+	\begin{description}
+		\item[${1}] ${2}
+	\end{description} 
+snippet i
+	\item ${1}
+# \begin{}...\end{}
+snippet begin
+	\begin{${1:env}}
+		${2}
+	\end{$1}
+# \begin{}...\end{} with option
+snippet begino
+	\begin{${1:env}}${2}
+		${3}
+	\end{$1}
+# Equation
+snippet eq
+	\begin{equation}
+		${1}
+	\end{equation}
+# Unnumbered Equation
+snippet \
+	\\[
+		${1}
+	\\]    
+# array	
+snippet arr
+	\begin{array}{${1}}
+		${2}
+	\end{array}
+# beamer 
+snippet frame
+	\begin{frame}
+		\frametitle{${1:Title Here}}
+		${2:Content}
+	\end{frame}
+snippet frames
+	\begin{frame}
+		\frametitle{${1:Title}}
+		\framesubtitle{${2:Subtitle}}
+		${3:Content}
+	\end{frame}
+snippet block
+	\begin{block}{${1}}
+		${2}
+	\end{block}
+snippet c2
+	\begin{columns}
+		\begin{column}{${1:0.5}\textwidth}
+			${3}
+		\end{column}
+		\begin{column}{${2:0.5}\textwidth}
+			${4}
+		\end{column}
+	\end{columns}
+snippet c3
+	\begin{columns}
+		\begin{column}{${1:0.33}\textwidth}
+			${4}
+		\end{column}
+		\begin{column}{${2:0.33}\textwidth}
+			${5}
+		\end{column}
+		\begin{column}{${3:0.33}\textwidth}
+			${6}
+		\end{column}
+	\end{columns}
+
+snippet ig
+	\includegraphics[${1:width}=${2:\textwidth}]{${3}}
+
+
