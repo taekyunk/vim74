@@ -1,9 +1,10 @@
+" vimrc for windows
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" pathogen setup: windows
+" pathogen setup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#infect()
 call pathogen#helptags()
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup items offered by default installation for Windows Vim
@@ -77,6 +78,8 @@ set nocompatible
 " http://vimdoc.sourceforge.net/htmldoc/filetype.html
 filetype plugin on
 
+" disable folding
+set nofoldenable
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin related setup
@@ -102,6 +105,21 @@ function! s:align()
   endif
 endfunction
 
+" prevent conflict with snipmate and supertab
+" https://github.com/amix/vimrc/issues/17
+let g:SuperTabDefaultCompletionType = "context"
+
+" EasyAlign
+" For visual mode (e.g. vip<Enter>)
+vmap <Enter>   <Plug>(EasyAlign)
+" For normal mode, with Vim movement (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+
+" showmarks plugin
+" Do not display automatically set marks
+" http://stackoverflow.com/questions/8720313/show-marks-plugin-causes-marks-to-pop-in-after-around-4-seconds
+let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin related setup: requires external program
@@ -109,12 +127,6 @@ endfunction
 " To use LanguageTool for grammar checking
 "let g:languagetool_jar="e:/My_Program_Files/LanguageTool-2.1/languagetool-commandline.jar"
 "let g:languagetool_lang="en-US"
-
-" EasyAlign
-" For visual mode (e.g. vip<Enter>)
-vmap <Enter>   <Plug>(EasyAlign)
-" For normal mode, with Vim movement (e.g. <Leader>aip)
-nmap <Leader>a <Plug>(EasyAlign)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
@@ -155,12 +167,6 @@ nnoremap <space> 10jzz
 nnoremap <backspace> 10kzz
 nnoremap <S-space> 10kzz
 
-" showmarks plugin
-" Do not display automatically set marks
-" http://stackoverflow.com/questions/8720313/show-marks-plugin-causes-marks-to-pop-in-after-around-4-seconds
-let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-
 " http://vimcasts.org/episodes/show-invisibles/
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -184,7 +190,6 @@ function! ToAscii()
 endfunction
 
 nnoremap <silent> <leader>ta :call ToAscii()<CR>
-
 
 " Script to convert Test bank to latex form
 function! MakeMultipleChoice()
@@ -214,7 +219,6 @@ endfunction
 
 nnoremap <silent> <leader>mth :call MakePipeTableHeader()<CR>
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Selectively load spell checker for some file types
 " http://jhshi.wordpress.com/2012/11/05/enabledisable-spell-checking-according-to-file-type-in-vim/
@@ -227,3 +231,4 @@ set nospell
 au BufNewFile,BufRead,BufEnter *.tex setlocal spell spelllang=en_us
 au BufNewFile,BufRead,BufEnter *.txt setlocal spell spelllang=en_us
 au BufNewFile,BufRead,BufEnter *.md setlocal spell spelllang=en_us
+
