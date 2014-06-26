@@ -171,7 +171,7 @@ nnoremap <S-space> 10kzz
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:?\ ,eol:¬
+set listchars=tab:>-,eol:¬
 
 " Select visual block again after decreasing or increasing indent
 vnoremap < <gv
