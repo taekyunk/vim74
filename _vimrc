@@ -51,7 +51,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 " makes the spaces feel like real tabs
-set softtabstop=4 
+set softtabstop=4
 
 " Search
 set ignorecase
@@ -65,7 +65,7 @@ set ai
 " Show line number
 set number
 
-" Highlight current line 
+" Highlight current line
 set cursorline
 
 " Use highlight syntax
@@ -181,10 +181,10 @@ vnoremap > >gv
 
 " move between split
 " http://benmccormick.org/2014/07/07/learning-vim-in-2014-working-with-files/
-nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split  
-nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split  
-nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split  
-nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split  
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
 " Replace extended ASCII characters by similar looking ASCII code
 function! ToAscii()
