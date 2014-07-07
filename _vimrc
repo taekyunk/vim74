@@ -122,6 +122,7 @@ let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 " airline
 set laststatus=2
+"let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin related setup: requires external program
@@ -155,7 +156,6 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-
 " Add blank line
 " http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
 " nnoremap <S-Enter> O<Esc>j
@@ -178,6 +178,13 @@ set listchars=tab:>-,eol:¬
 " Select visual block again after decreasing or increasing indent
 vnoremap < <gv
 vnoremap > >gv
+
+" move between split
+" http://benmccormick.org/2014/07/07/learning-vim-in-2014-working-with-files/
+nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split  
+nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split  
+nnoremap <C-L> <C-W><C-L> "Ctrl-l to move right a split  
+nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split  
 
 " Replace extended ASCII characters by similar looking ASCII code
 function! ToAscii()
