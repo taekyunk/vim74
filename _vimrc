@@ -122,7 +122,7 @@ let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 " airline
 set laststatus=2
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin related setup: requires external program
@@ -185,6 +185,21 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
+
+" http://hashrocket.com/blog/posts/8-great-vim-mappings
+" quit using <leader>q
+noremap <leader>q :q<cr>
+" save using <leader>s
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <esc>:w<cr>
+" apply macro with Q. qq to create macro using register q, quit with q
+" apply with Q
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
+
+" NERDTree toggle
+" http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
+map <F2> :NERDTreeToggle<cr>
 
 " Replace extended ASCII characters by similar looking ASCII code
 function! ToAscii()
