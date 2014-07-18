@@ -201,6 +201,13 @@ vnoremap Q :norm @q<cr>
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
 map <F2> :NERDTreeToggle<cr>
 
+" copy & paste from system clipboard: F8 to copy/yank, F9 to paste
+vnoremap <F8> "+y
+nnoremap <F8> gg"+yG
+inoremap <F8> <esc>gg"+yG
+nnoremap <F9> "+p
+inoremap <F9> <esc>"+p
+
 " Replace extended ASCII characters by similar looking ASCII code
 function! ToAscii()
     :silent! %s/\%x91/'/g
