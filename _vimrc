@@ -140,6 +140,7 @@ nnoremap <leader>h2 yypVr-
 
 " Clear search terms
 nnoremap <leader>cst :let @/ = ""<cr>
+nnoremap <F4> :let @/ = ""<cr>
 
 " Clear all trailing white spaces
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
