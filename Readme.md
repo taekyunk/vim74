@@ -15,5 +15,7 @@
 
     * Or, create a symbolic link
 
+    ln -s _vimrc .vimrc
+
 * Based on Vim 7.4
 

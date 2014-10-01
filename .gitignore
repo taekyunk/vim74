@@ -1,0 +1,65 @@
+# My personal ignore list for programming language
+# T.K. Kim
+#
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+#
+# Note: remove any extra spaces at the end of each line.
+
+# Vim main files should be excluded
+vim74/*
+# vim tags file
+tags
+tags-ja
+
+# Ubuntu backup files
+*~
+*.*~
+*.swp
+
+# temporary LaTeX objects
+# http://tex.stackexchange.com/questions/17845/which-auxiliary-latex-files-should-be-ignored-by-version-control-software
+*.aux
+*.pdf
+*.ps
+*.dvi
+*.log
+*.bak
+*.synctex
+*.gz
+*.out
+*.bbl
+*.blg
+*.fdb_latexmk
+
+# Other types
+*.html
+*.docx
+~*
+
+# Figures (need to comment out for tex files)
+*.png
+*.jpg
+
+# Executables
+*.exe
+*.o
+
+# R related files
+*.png
+*.RData
+# *.txt
+.Rproj.user/*
+*.Rproj
+
+# R package related
+man/*
+NAMESPACE
+*.Rd
+
+# temporary files 
+@@*
+
+# Haskell
+*.in
+*.hi
