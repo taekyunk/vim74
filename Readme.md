@@ -5,17 +5,19 @@
 * Set up vim plugins managed by Pathogen
 * Setup for windows
 * To use this under linux,
-    1. clone this repository
-    2. Rename folder from 'vimfiles' to '.vim'
-    3. create .vimrc from _vimrc
 
-    * Since mostly windows _vimrc is updated, create linux version .vimrc when necessary
+```
+# open a terminal from ~
+sudo apt-get install -y vim-gnome
 
-    dos2unix -n _vimrc .vimrc
+# clone this repository
+git clone https://github.com/taekyunk/vim74
 
-    * Or, create a symbolic link
-
-    ln -s _vimrc .vimrc
+# make symbolic links to all required directory and files
+sudo ln -s vim74/vimfiles/ .vim
+sudo ln -s vim74/_vimrc .vimrc
+sudo ln -s vim74/.gvimrc .gvimrc
+```
 
 * Based on Vim 7.4
 
