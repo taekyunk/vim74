@@ -138,10 +138,6 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap <leader>h1 yypVr=
 nnoremap <leader>h2 yypVr-
 
-" Clear search terms
-nnoremap <leader>cst :let @/ = ""<cr>
-nnoremap <F4> :let @/ = ""<cr>
-
 " Clear all trailing white spaces
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 nnoremap <leader>W :%s/\v\s+$//<cr>:let @/ = ""<cr>
@@ -201,6 +197,13 @@ vnoremap Q :norm @q<cr>
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
 map <F2> :NERDTreeToggle<cr>
+
+" Clear search terms
+nnoremap <leader>cst :let @/ = ""<cr>
+nnoremap <F4> :let @/ = ""<cr>
+
+" force refresh or redraw screen
+nnoremap <F5> :redraw!<cr>
 
 " copy & paste from system clipboard: F8 to copy/yank, F9 to paste
 vnoremap <F8> "+y
