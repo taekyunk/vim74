@@ -833,7 +833,7 @@ au BufNewFile,BufRead *.hex,*.h32		setf hex
 au BufNewFile,BufRead *.t.html			setf tilde
 
 " HTML (.shtml and .stm for server side)
-au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm  call s:FThtml()
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm,*.tpl  call s:FThtml()
 
 " Distinguish between HTML, XHTML and Django
 func! s:FThtml()
@@ -1385,7 +1385,7 @@ au BufNewFile,BufRead *.pod			setf pod
 " Php, php3, php4, etc.
 " Also Phtml (was used for PHP 2 in the past)
 " Also .ctp for Cake template file
-au BufNewFile,BufRead *.php,*.php\d,*.phtml,*.ctp	setf php
+au BufNewFile,BufRead *.php,*.php\d,*.phtml,*.ctp,*.inc	setf php
 
 " Pike
 au BufNewFile,BufRead *.pike,*.lpc,*.ulpc,*.pmod setf pike
@@ -1430,7 +1430,7 @@ au BufNewFile,BufRead *.pov			setf pov
 au BufNewFile,BufRead .povrayrc			setf povini
 
 " Povray, PHP or assembly
-au BufNewFile,BufRead *.inc			call s:FTinc()
+"au BufNewFile,BufRead *.inc			call s:FTinc()
 
 func! s:FTinc()
   if exists("g:filetype_inc")
@@ -1927,7 +1927,7 @@ au BufNewFile,BufRead *.cls
 	\ endif
 
 " Smarty templates
-au BufNewFile,BufRead *.tpl			setf smarty
+"au BufNewFile,BufRead *.tpl			setf smarty
 
 " SMIL or XML
 au BufNewFile,BufRead *.smil
