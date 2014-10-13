@@ -82,13 +82,19 @@ filetype plugin on
 set nofoldenable
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin related setup
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Color scheme
-" colorscheme zenburn
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set t_Co=256
+
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
+
+" colorscheme zenburn
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin related setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Automatically justify table with | using tabular plugin
 " From https://gist.github.com/287147
