@@ -241,6 +241,7 @@ function! MakeMultipleChoice()
     :silent! call ToAscii()<CR>
     :silent! g/^\s*$/d
     :silent! :1
+    " need trailing space in this line. Do not delete!
     :silent! normal I\question 
     :silent! g/\v^a./normal O\begin{choices}
     :silent! g/\v^e./normal o\end{choices}
