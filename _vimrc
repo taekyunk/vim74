@@ -200,6 +200,10 @@ inoremap <leader>s <esc>:w<cr>
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
+" shortcut the close buffer
+nnoremap <leader>w :bd<cr>
+inoremap <leader>w <esc>:bd<cr>
+
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
 map <F2> :NERDTreeToggle<cr>
