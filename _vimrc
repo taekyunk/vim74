@@ -59,9 +59,6 @@ set smartcase
 set hlsearch
 set incsearch
 
-" Indent
-set ai
-
 " Show line number
 set number
 
@@ -77,6 +74,10 @@ set nocompatible
 " Enable filetype detection and loads 'ftplugin.vim'
 " http://vimdoc.sourceforge.net/htmldoc/filetype.html
 filetype plugin on
+
+" Indent
+filetype indent on
+set autoindent
 
 " disable folding
 set nofoldenable
