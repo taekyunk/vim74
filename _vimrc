@@ -132,6 +132,9 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
+" equal splits when resized
+autocmd VimResized * wincmd =
+
 " http://hashrocket.com/blog/posts/8-great-vim-mappings
 " quit using <leader>q
 noremap <leader>q :q<cr>
