@@ -132,13 +132,6 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin related setup: requires external program
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" To use LanguageTool for grammar checking
-"let g:languagetool_jar="e:/My_Program_Files/LanguageTool-2.1/languagetool-commandline.jar"
-"let g:languagetool_lang="en-US"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
