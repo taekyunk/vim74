@@ -6,3 +6,4 @@ set guifont=Ubuntu\ Mono\ 13
 " Size of GVim window
 " set lines=35 columns=100
 set lines=40 columns=100
+
