@@ -141,6 +141,10 @@ let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" use ; as :
+nnoremap ; :
+
 " To create markdown level 1 and level 2 header
 nnoremap <leader>h1 yypVr=
 nnoremap <leader>h2 yypVr-
