@@ -173,7 +173,8 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
 " equal splits when resized
-autocmd VimResized * wincmd =
+" moved to autocmd group
+"autocmd VimResized * wincmd =
 
 " http://hashrocket.com/blog/posts/8-great-vim-mappings
 " quit using <leader>q
@@ -299,8 +300,25 @@ let g:airline#extensions#tabline#enabled = 1
 " global setting
 set nospell
 
-" local
-au BufNewFile,BufRead,BufEnter *.tex setlocal spell spelllang=en_us
-au BufNewFile,BufRead,BufEnter *.txt setlocal spell spelllang=en_us
-au BufNewFile,BufRead,BufEnter *.md setlocal spell spelllang=en_us
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd group
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup vimrcEx
+    autocmd!
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it for commit messages, when the position is invalid, or when
+    " inside an event handler (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+                \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+                \ exe "normal g`\"" |
+                \ endif
+    " selectively load spell checker for some file types
+    autocmd BufNewFile,BufRead,BufEnter *.tex setlocal spell spelllang=en_us
+    autocmd BufNewFile,BufRead,BufEnter *.txt setlocal spell spelllang=en_us
+    autocmd BufNewFile,BufRead,BufEnter *.md setlocal spell spelllang=en_us
+    " equal splits when resized
+    autocmd VimResized * wincmd =
+augroup END
 
