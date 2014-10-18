@@ -27,6 +27,7 @@ set nocompatible " no compatibility with VI
 set backup		" keep a backup file
 set history=200		" keep n lines of command line history
 " disable bell/visual bell
+" http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
