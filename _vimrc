@@ -198,6 +198,8 @@ inoremap <leader>w <esc>:bd<cr>
 map <F2> :NERDTreeToggle<cr>
 
 " Clear search terms
+"nnoremap <esc> :noh<cr><esc> " additional <esc> will flash the screen
+nnoremap <silent> <esc> :let @/ = ""<cr>
 nnoremap <F4> :let @/ = ""<cr>
 
 " force refresh or redraw screen
