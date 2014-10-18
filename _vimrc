@@ -31,7 +31,7 @@ set history=200		" keep n lines of command line history
 set noerrorbells visualbell t_vb=
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" microsoft windows 
+" microsoft windows
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://superuser.com/questions/697847/cant-run-vimdiff-7-4-on-windows-7
 set diffexpr=MyDiff()
@@ -99,7 +99,7 @@ set hlsearch
 set incsearch
 
 " editor screen
-set number " show line number 
+set number " show line number
 set ruler		" show the cursor position all the time
 set cursorline " highlight current line
 set showcmd		" display incomplete commands
@@ -108,7 +108,7 @@ set showcmd		" display incomplete commands
 set nofoldenable
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Color scheme/theme 
+" Color scheme/theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
 
@@ -121,7 +121,7 @@ colorscheme solarized
 "let g:kolor_italic=1                    " Enable italic. Default: 1
 "let g:kolor_bold=1                      " Enable bold. Default: 1
 "let g:kolor_underlined=0                " Enable underline. Default: 0
-"let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0 
+"let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
 "colorscheme kolor
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
