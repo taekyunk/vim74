@@ -30,6 +30,19 @@ set history=200		" keep n lines of command line history
 " http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
 
+augroup vimrcEx
+    autocmd!
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it for commit messages, when the position is invalid, or when
+    " inside an event handler (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+                \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+                \ exe "normal g`\"" |
+                \ endif
+augroup END
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " microsoft windows
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -128,14 +141,11 @@ colorscheme solarized
 " key shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap ; :
+nnoremap : ;
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Clear all trailing white spaces
-" From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-nnoremap <leader>W :%s/\v\s+$//<cr>:let @/ = ""<cr>
 
 " Use 'magic' for search always
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
@@ -158,12 +168,6 @@ nnoremap <space> <C-f>
 nnoremap <backspace> <C-b>
 nnoremap <S-space> <C-b>
 
-" http://vimcasts.org/episodes/show-invisibles/
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:>-,eol:¬
-
 " Select visual block again after decreasing or increasing indent
 vnoremap < <gv
 vnoremap > >gv
@@ -176,8 +180,7 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
 " equal splits when resized
-" moved to autocmd group
-"autocmd VimResized * wincmd =
+autocmd VimResized * wincmd =
 
 " http://hashrocket.com/blog/posts/8-great-vim-mappings
 " quit using <leader>q
@@ -193,6 +196,17 @@ vnoremap Q :norm @q<cr>
 " close buffer
 nnoremap <leader>w :bd<cr>
 inoremap <leader>w <esc>:bd<cr>
+
+
+" Clear all trailing white spaces
+" From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+nnoremap <leader>W :%s/\v\s+$//<cr>:let @/ = ""<cr>
+
+" Shortcut to rapidly toggle `set list`
+" http://vimcasts.org/episodes/show-invisibles/
+nmap <leader>l :set list!<CR>
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:>-,eol:¬
 
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
@@ -283,25 +297,11 @@ let g:airline#extensions#tabline#enabled = 1
 " global setting
 set nospell
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmd group
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-augroup vimrcEx
+augroup spellCheck
     autocmd!
-    " For all text files set 'textwidth' to 78 characters.
-    autocmd FileType text setlocal textwidth=78
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it for commit messages, when the position is invalid, or when
-    " inside an event handler (happens when dropping a file on gvim).
-    autocmd BufReadPost *
-                \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-                \ exe "normal g`\"" |
-                \ endif
-    " selectively load spell checker for some file types
     autocmd BufNewFile,BufRead,BufEnter *.tex setlocal spell spelllang=en_us
     autocmd BufNewFile,BufRead,BufEnter *.txt setlocal spell spelllang=en_us
     autocmd BufNewFile,BufRead,BufEnter *.md setlocal spell spelllang=en_us
-    " equal splits when resized
-    autocmd VimResized * wincmd =
 augroup END
+
 
