@@ -228,26 +228,6 @@ endfunction
 
 nnoremap <silent> <leader>ta :call ToAscii()<CR>
 
-" Script to convert Test bank to latex form
-function! MakeMultipleChoice()
-    :silent! call ToAscii()<CR>
-    :silent! g/^\s*$/d
-    :silent! :1
-    " need trailing space in this line. Do not delete!
-    :silent! normal I\question 
-    :silent! g/\v^a./normal O\begin{choices}
-    :silent! g/\v^e./normal o\end{choices}
-    :silent! %s/\v^[abcde]./    \\choice/g
-    :silent! %s/\v\$/\\$/g
-    :silent! %s/\v\&/\\&/g
-    :silent! %s/\v\%/\\%/g
-    :silent! %s/\v_+/\\blankplaceholder/g
-    :silent! :retab
-    :silent! normal Go
-endfunction
-
-nnoremap <silent> <leader>mmc :call MakeMultipleChoice()<CR>
-
 " Script to make pipe table header similar to EMACS org-mode
 function! MakePipeTableHeader()
     :silent! normal yyp
