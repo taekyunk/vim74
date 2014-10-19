@@ -196,7 +196,6 @@ vnoremap Q :norm @q<cr>
 nnoremap <leader>w :bd<cr>
 inoremap <leader>w <esc>:bd<cr>
 
-
 " Clear all trailing white spaces
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 nnoremap <leader>W :%s/\v\s+$//<cr>:let @/ = ""<cr>
@@ -206,6 +205,9 @@ nnoremap <leader>W :%s/\v\s+$//<cr>:let @/ = ""<cr>
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:>-,eol:¬
+
+" fast edit vimrc
+nmap <leader>v :edit $MYVIMRC<CR>
 
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
