@@ -215,6 +215,7 @@ map <F2> :NERDTreeToggle<cr>
 
 " Clear search terms
 nnoremap <silent> <F4> :nohlsearch<cr>
+nnoremap <silent> <leader><space> :nohlsearch<cr>
 
 " force refresh or redraw screen
 nnoremap <F5> :redraw!<cr>
