@@ -4,7 +4,7 @@ set gfn=Consolas:h12:cANSI
 
 " Size of GVim window
 " set lines=35 columns=100
-set lines=40 columns=100
+set lines=50 columns=100
 
 " disable visual bell in Gvim
 set vb t_vb=
