@@ -157,11 +157,11 @@ nnoremap ; :
 nnoremap / /\v
 vnoremap / /\v
 
-" Move by screen line
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
+" Move by screen line without count, but move by actual line with count
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+vnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+vnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
 " Add blank line
 " http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
