@@ -215,13 +215,12 @@ set listchars=tab:>-,eol:¬
 " fast edit vimrc
 nmap <leader>v :edit $MYVIMRC<CR>
 
+" Clear search terms
+nnoremap <silent> <leader><space> :nohlsearch<cr>
+
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
 map <F2> :NERDTreeToggle<cr>
-
-" Clear search terms
-nnoremap <silent> <F4> :nohlsearch<cr>
-nnoremap <silent> <leader><space> :nohlsearch<cr>
 
 " force refresh or redraw screen
 nnoremap <F5> :redraw!<cr>
