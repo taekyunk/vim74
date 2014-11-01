@@ -218,6 +218,10 @@ nmap <leader>v :edit $MYVIMRC<CR>
 " Clear search terms
 nnoremap <silent> <leader><space> :nohlsearch<cr>
 
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
 map <F2> :NERDTreeToggle<cr>
