@@ -300,6 +300,11 @@ let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
+" vim-sneak
+let g:sneak#s_next = 1
+let g:sneak#streak = 1
+let g:sneak#use_ic_scs = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Selectively load spell checker for some file types
 " http://jhshi.wordpress.com/2012/11/05/enabledisable-spell-checking-according-to-file-type-in-vim/
