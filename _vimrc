@@ -222,6 +222,13 @@ nnoremap <silent> <leader><space> :nohlsearch<cr>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Movement in insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-l> <C-o>a
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-^> <C-o><C-^>
+
 " NERDTree toggle
 " http://stackoverflow.com/questions/2413005/switching-between-tabs-in-nerdtree?rq=1
 map <F2> :NERDTreeToggle<cr>
@@ -302,8 +309,12 @@ let g:airline#extensions#tabline#enabled = 1
 
 " vim-sneak
 let g:sneak#s_next = 1
-let g:sneak#streak = 1
+" let g:sneak#streak = 1
 let g:sneak#use_ic_scs = 1
+" force streak mode
+nmap s <Plug>(SneakStreak)
+nmap S <Plug>(SneakStreakBackward)
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Selectively load spell checker for some file types
