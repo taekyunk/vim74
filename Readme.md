@@ -9,14 +9,21 @@
 
 ```
 # open a terminal from ~
+# install vim
 sudo apt-get install -y vim-gnome
 
-# clone this repository
-git clone https://github.com/taekyunk/vim74
+# clone this repository into ~/vimconfig
+git clone https://github.com/taekyunk/vim74 vimconfig
 
 # make symbolic links to all required directory and files
-ln -s vim74/vimfiles .vim
-ln -s vim74/_vimrc .vimrc
-ln -s vim74/.gvimrc .gvimrc
+ln -s vimconfig/vimfiles .vim
+ln -s vimconfig/_vimrc .vimrc
+ln -s vimconfig/.gvimrc .gvimrc
 ```
+Alternatively, use a script
+
+````
+cd ~
+sh vimconfig/setup.sh
+````
 
